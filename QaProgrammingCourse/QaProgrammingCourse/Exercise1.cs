@@ -14,5 +14,7 @@ namespace QaProgrammingCourse
             Console.WriteLine(@"Third expression result: {0}", (x * y + y * z) / Math.Pow(3, z));
             Console.ReadKey();
         }
+
+    }
     }
 }
