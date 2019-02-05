@@ -9,7 +9,9 @@ namespace Lesson1Exercise2
             int a = int.Parse(Console.ReadLine()),
                 b = int.Parse(Console.ReadLine()),
                 c = int.Parse(Console.ReadLine());
-            Console.WriteLine(@"Parallelepiped diagonal length: {0}", Math.Sqrt(a * a + b * b + c * c));
+
+            double d = Math.Sqrt(a*a + b*b + c*c);
+            Console.WriteLine($"Parallelepiped diagonal length: {d}");
             Console.ReadKey();
         }
     }
