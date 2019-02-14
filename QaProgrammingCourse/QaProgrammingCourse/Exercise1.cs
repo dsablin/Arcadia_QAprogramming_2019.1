@@ -4,11 +4,20 @@ namespace QaProgrammingCourse
 {
     public class Exercise1
     {
+        static bool IsNumber(string ss, out int i)
+        {
+            return int.TryParse(ss, out i);
+        }
+
         static void Main()
         {
-            int x = int.Parse(Console.ReadLine()),
-                y = int.Parse(Console.ReadLine()),
-                z = int.Parse(Console.ReadLine());
+            if (!IsNumber(Console.ReadLine(), out int x) ||
+                !IsNumber(Console.ReadLine(), out int y) ||
+                !IsNumber(Console.ReadLine(), out int z))
+            {
+                Console.WriteLine("Not an integer number entered!");
+                return;
+            }
 
             Console.WriteLine($"First expression result: {(x + y) * (Math.Pow(2, z) + 1)}");
             Console.WriteLine($"Second expression result: {(x % z - 1) * Math.Sqrt(y)}");
