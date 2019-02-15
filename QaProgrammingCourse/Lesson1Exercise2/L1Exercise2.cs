@@ -2,7 +2,7 @@
 
 namespace Lesson1Exercise2
 {
-    public class Exercise2
+    public class L1Exercise2
     {
         static int SideLength()
         {

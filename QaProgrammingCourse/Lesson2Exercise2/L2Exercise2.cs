@@ -2,9 +2,9 @@
 
 namespace Lesson2Exercise2
 {
-    public class Program
+    public class L2Exercise2
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string dbPassword = "P@55w0rd";
             string dbUserName = "UserName";
@@ -25,7 +25,7 @@ namespace Lesson2Exercise2
             }
             if (i > 3)
             {
-                Console.WriteLine("You typed wrong credentials three times! " +
+                Console.WriteLine("You typed wrong credentials three times!" +
                 "\nBrute Force detected! CyberPolice is informed!" +
                 "\nProgram will be closed.");
                 Console.ReadKey();

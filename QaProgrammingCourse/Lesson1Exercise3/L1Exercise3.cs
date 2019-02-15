@@ -2,7 +2,7 @@
 
 namespace Lesson1Exercise3
 {
-    public class Exercise3
+    public class L1Exercise3
     {
         static void Main()
         {

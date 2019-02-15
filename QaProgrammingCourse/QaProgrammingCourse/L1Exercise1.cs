@@ -2,7 +2,7 @@
 
 namespace QaProgrammingCourse
 {
-    public class Exercise1
+    public class L1Exercise1
     {
         static bool IsNumber(string ss, out int i)
         {
