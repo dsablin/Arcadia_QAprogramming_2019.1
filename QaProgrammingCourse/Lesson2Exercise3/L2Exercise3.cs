@@ -5,7 +5,7 @@ namespace Lesson2Exercise3
 {
     public class L2Exercise3
     {
-        static double GetNumber()
+        private static double GetNumber()
         {
             double sideLength;
             while (!double.TryParse(Console.ReadLine(), out sideLength)) {
@@ -14,7 +14,7 @@ namespace Lesson2Exercise3
             return sideLength;
         }
 
-        static char GetOperator()
+        private static char GetOperator()
         {
             char [] operators = new char[5] { '+', '-', '/', '*', '^' };
             char sign = char.Parse(Console.ReadLine());
@@ -27,16 +27,8 @@ namespace Lesson2Exercise3
             return sign;
         }
 
-        static void Main()
+        private static void Calculate(double a, double b, char sign)
         {
-            Console.WriteLine("Welcome to regular calculator program!" +
-                "\n Please enter two numbers and the mathematical operator.");
-            Console.WriteLine("First number:");
-            double a = GetNumber();
-            Console.WriteLine("Second number:");
-            double b = GetNumber();
-            Console.WriteLine("Math operator (one of +, -, /, * or ^):");
-            char sign = GetOperator();
             switch (sign)
             {
                 case '+': {
@@ -63,8 +55,21 @@ namespace Lesson2Exercise3
                         Console.WriteLine(Math.Pow(a, b));
                         break;
                     }
-                default: { break; }
             }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Welcome to regular calculator program!" +
+                "\n Please enter two numbers and the mathematical operator.");
+            Console.WriteLine("First number:");
+            double a = GetNumber();
+            Console.WriteLine("Second number:");
+            double b = GetNumber();
+            Console.WriteLine("Math operator (one of +, -, /, * or ^):");
+            char sign = GetOperator();
+
+            Calculate(a, b, sign);
             Console.ReadKey();
         }
     }
